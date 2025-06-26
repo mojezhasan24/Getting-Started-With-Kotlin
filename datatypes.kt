@@ -5,7 +5,7 @@ INTEGERS
 1. BYTE : The Byte data type can store whole numbers from -128 to 127. This can be used instead of Int or other integer types to save memory when you are certain that the value will be within -128 and 127
 2. SHORT: The Short data type can store whole numbers from -32768 to 32767
 3. INT: The Int data type can store whole numbers from -2147483648 to 2147483647
-4. LONG: This ins used whrn int is too small to store a value can store whole numbers from -9223372036854775808 to 9223372036854775807
+4. LONG: This is used when int is too small to store a value can store whole numbers from -9223372036854775808 to 9223372036854775807
 
 FLOATING-POINT NUMBERS
 1. FLOAT

@@ -111,5 +111,31 @@ fun main() {
     val byteArray = name.toByteArray() // Converting the string to a byte array
     println("Byte array of name: ${byteArray.joinToString(", ")}") // Using string template to display the byte array
 
-    
+"""
+    O/P
+    My name is John, I am 30 years old, and my height is 5.9 feet.
+    Hello, John! You are 30 years old.
+    This is a multiline string.
+    It can span multiple lines.
+    Useful for longer text.
+    Length of name: 4
+    Names are equal.
+    Uppercase name: JOHN
+    Lowercase name: john
+    Trimmed string: Hello, World!
+    Replaced string: Hello, Alice!
+    Fruits: [apple, banana, cherry]
+    First character of name: J
+    Substring of name: Jo
+    Formatted string: Name: John, Age: 30, Height: 5.9
+    The sentence contains the word 'great'.
+    Greeting starts with 'Hello'.
+    Greeting ends with 'Kotlin!'.
+    The index of 'Kotlin' in the greeting is: 7
+    The emptyString is empty.
+    The blankString is blank.
+    Character array of name: J, o, h, n
+    Byte array of name: 74, 111, 104, 110
+"""
+
 }

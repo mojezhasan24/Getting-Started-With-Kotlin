@@ -80,30 +80,41 @@ Below is a simple calculator that performs addition, subtraction, multiplication
 fun main() {
     println("Simple Kotlin Calculator")
 
-    // Prompt the user and read the first number as a Double
+    // Prompt the user to enter the first number.
+    // readLine() reads input as a String from the user.
+    // !! asserts that the input is not null.
+    // .toDouble() converts the input String to a Double.
     print("Enter first number: ")
-    val num1 = readLine()!!.toDouble() // Converts input String to Double
+    val num1 = readLine()!!.toDouble()
 
-    // Prompt the user and read the operator as a String
+    // Prompt the user to enter an operator.
+    // The operator is read as a String (e.g., "+", "-", "*", "/", "%").
     print("Enter operator (+, -, *, /, %): ")
-    val operator = readLine()!! // Reads the operator
+    val operator = readLine()!!
 
-    // Prompt the user and read the second number as a Double
+    // Prompt the user to enter the second number.
+    // Again, input is read as a String and converted to Double.
     print("Enter second number: ")
-    val num2 = readLine()!!.toDouble() // Converts input String to Double
+    val num2 = readLine()!!.toDouble()
 
-    // Perform the operation based on the operator entered
+    // The 'when' expression checks the value of 'operator'
+    // and performs the corresponding calculation.
+    // If the operator is not recognized, it returns "Invalid operator".
     val result = when (operator) {
-        "+" -> num1 + num2
-        "-" -> num1 - num2
-        "*" -> num1 * num2
-        "/" -> if (num2 != 0.0) num1 / num2 else "Cannot divide by zero"
-        "%" -> num1 % num2
-        else -> "Invalid operator"
+        "+" -> num1 + num2           // Addition
+        "-" -> num1 - num2           // Subtraction
+        "*" -> num1 * num2           // Multiplication
+        "/" -> if (num2 != 0.0) num1 / num2 else "Cannot divide by zero" // Division with zero check
+        "%" -> num1 % num2           // Modulus (remainder)
+        else -> "Invalid operator"   // Handles invalid input
     }
 
+    // Print the result of the calculation.
     println("Result: $result")
 
-    // Note: readLine() reads input as String. Use .toInt(), .toDouble(), etc., for conversion.
-    // Always check for null or invalid input in production code.
+    // Note:
+    // - readLine() always returns a String? (nullable String).
+    // - The !! operator will throw an exception if the input is null.
+    // - .toInt(), .toDouble(), etc., are used to convert input to numbers.
+    // - In production code, always check for null or invalid input to avoid crashes.
 }

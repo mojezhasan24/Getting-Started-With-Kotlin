@@ -29,7 +29,6 @@ Kotlin divides the operators into the following groups:
 Arithmetic Operators
 
 Arithmetic operators are used to perform common mathematical operations.
-Operator 	Name 	Description 	Example 	Try it
 + 	Addition 	Adds together two values 	x + y 	
 - 	Subtraction 	Subtracts one value from another 	x - y 	
 * 	Multiplication 	Multiplies two values 	x * y 	
@@ -37,48 +36,30 @@ Operator 	Name 	Description 	Example 	Try it
 % 	Modulus 	Returns the division remainder 	x % y 	
 ++ 	Increment 	Increases the value by 1 	++x 	
 -- 	Decrement 	Decreases the value by 1 	--x 	
-Kotlin Assignment Operators
 
-Assignment operators are used to assign values to variables.
+Assignment Operators
 
-In the example below, we use the assignment operator (=) to assign the value 10 to a variable called x:
-Example
+=   Assigns value to variable
++=  Adds and assigns
+-=  Subtracts and assigns
+*=  Multiplies and assigns
+/=  Divides and assigns
+%=  Modulus and assigns
 
-var x = 10
+Comparison Operators
 
-The addition assignment operator (+=) adds a value to a variable:
-Example
+==  Equal to
+!=  Not equal to
+>   Greater than
+<   Less than
+>=  Greater than or equal to
+<=  Less than or equal to
 
-var x = 10
-x += 5
+Logical Operators
 
-A list of all assignment operators:
-Operator 	Example 	Same As 	Try it
-= 	x = 5 	x = 5 	
-+= 	x += 3 	x = x + 3 	
--= 	x -= 3 	x = x - 3 	
-*= 	x *= 3 	x = x * 3 	
-/= 	x /= 3 	x = x / 3 	
-%= 	x %= 3 	x = x % 3 	
-Kotlin Comparison Operators
-
-Comparison operators are used to compare two values, and returns a Boolean value: either true or false.
-Operator 	Name 	Example 	Try it
-== 	Equal to 	x == y 	
-!= 	Not equal 	x != y 	
-> 	Greater than 	x > y 	
-< 	Less than 	x < y 	
->= 	Greater than or equal to 	x >= y 	
-<= 	Less than or equal to 	x <= y 	
-
-You will learn much more about Booleans in the Boolean chapter and Conditions.
-Kotlin Logical Operators
-
-Logical operators are used to determine the logic between variables or values:
-Operator 	Name 	Description 	Example 	Try it
-&&  	Logical and 	Returns true if both statements are true 	x < 5 &&  x < 10 	
-||  	Logical or 	Returns true if one of the statements is true 	x < 5 || x < 4 	
-! 	Logical not 	Reverse the result, returns false if the result is true 	! (not) is used to reverse the result of a condition.   
+&&  Logical and
+||  Logical or
+!   Logical not
  */
 
 fun main() {
@@ -86,53 +67,60 @@ fun main() {
     val a = 10
     val b = 3
 
-    println("a + b = ${a + b}") // Addition
-    println("a - b = ${a - b}") // Subtraction
-    println("a * b = ${a * b}") // Multiplication
-    println("a / b = ${a / b}") // Division (integer division)
-    println("a % b = ${a % b}") // Modulus
+    println("Arithmetic Operators:")
+    println("a = $a, b = $b")
+    println("a + b = ${a + b}   // Addition")
+    println("a - b = ${a - b}   // Subtraction")
+    println("a * b = ${a * b}   // Multiplication")
+    println("a / b = ${a / b}   // Division (integer division)")
+    println("a % b = ${a % b}   // Modulus (remainder)")
 
     var c = 5
-    println("c before increment: $c")
+    println("\nc before increment: $c")
     c++
-    println("c after increment: $c")
+    println("c after increment (c++): $c")
     c--
-    println("c after decrement: $c")
+    println("c after decrement (c--): $c")
 
-    println()
+    println("\n-----------------------------\n")
 
     // Assignment Operators
     var x = 10
-    println("x = $x")
+    println("Assignment Operators:")
+    println("Initial x = $x")
     x += 5
-    println("x += 5 -> $x")
+    println("x += 5  -> $x")
     x -= 3
-    println("x -= 3 -> $x")
+    println("x -= 3  -> $x")
     x *= 2
-    println("x *= 2 -> $x")
+    println("x *= 2  -> $x")
     x /= 4
-    println("x /= 4 -> $x")
+    println("x /= 4  -> $x")
     x %= 3
-    println("x %= 3 -> $x")
+    println("x %= 3  -> $x")
 
-    println()
+    println("\n-----------------------------\n")
 
     // Comparison Operators
     val y = 7
-    println("a == y: ${a == y}")
-    println("a != y: ${a != y}")
-    println("a > y: ${a > y}")
-    println("a < y: ${a < y}")
-    println("a >= y: ${a >= y}")
-    println("a <= y: ${a <= y}")
+    println("Comparison Operators:")
+    println("a = $a, y = $y")
+    println("a == y: ${a == y}   // Equal to")
+    println("a != y: ${a != y}   // Not equal to")
+    println("a > y: ${a > y}     // Greater than")
+    println("a < y: ${a < y}     // Less than")
+    println("a >= y: ${a >= y}   // Greater than or equal to")
+    println("a <= y: ${a <= y}   // Less than or equal to")
 
-    println()
+    println("\n-----------------------------\n")
 
     // Logical Operators
     val cond1 = a > b
     val cond2 = y < b
+    println("Logical Operators:")
     println("cond1 (a > b): $cond1")
     println("cond2 (y < b): $cond2")
-    println("cond1 && cond2: ${cond1 && cond2}")
-    println("cond1 || cond2: ${cond1 || cond2}")
+    println("cond1 && cond2: ${cond1 && cond2}   // Logical AND")
+    println("cond1 || cond2: ${cond1 || cond2}   // Logical OR")
+    println("!cond1: ${!cond1}                   // Logical NOT")
 }

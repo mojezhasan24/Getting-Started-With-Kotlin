@@ -1,124 +1,134 @@
 /* 
-Numbers: 1. integers, 2. floating-point numbers 3. scientific numbers
+Kotlin Data Types
+
+Numbers in Kotlin:
+1. Integers
+2. Floating-point numbers
+3. Scientific numbers
 
 INTEGERS
-1. BYTE : The Byte data type can store whole numbers from -128 to 127. This can be used instead of Int or other integer types to save memory when you are certain that the value will be within -128 and 127
-2. SHORT: The Short data type can store whole numbers from -32768 to 32767
-3. INT: The Int data type can store whole numbers from -2147483648 to 2147483647
-4. LONG: This is used when int is too small to store a value can store whole numbers from -9223372036854775808 to 9223372036854775807
+1. BYTE  : Stores whole numbers from -128 to 127. Use when you need to save memory and the value fits this range.
+2. SHORT : Stores whole numbers from -32768 to 32767.
+3. INT   : Stores whole numbers from -2147483648 to 2147483647. Most commonly used integer type.
+4. LONG  : Stores whole numbers from -9223372036854775808 to 9223372036854775807. Use when Int is too small.
 
 FLOATING-POINT NUMBERS
-1. FLOAT
-2. DOUBLE
-   Floating point types represent numbers with a decimal, such as 9.99 or 3.14515.
-   The Float and Double data types can store fractional numbers
+1. FLOAT  : Stores fractional numbers, ends with "F" (e.g., 3.14F).
+2. DOUBLE : Stores fractional numbers with double precision (e.g., 3.14159).
 
 SCIENTIFIC NUMBERS
-A floating point number can also be a scientific number with an "e" or "E" to indicate the power of 10
+Floating point numbers can also be written in scientific notation using "e" or "E" to indicate the power of 10.
+Example: 3.5e2 = 3.5 * 10^2 = 350.0
+
+BOOLEAN
+- Stores only true or false values.
+
+CHARACTERS
+- Char stores a single character, surrounded by single quotes (e.g., 'A').
+
+STRINGS
+- String stores a sequence of characters, surrounded by double quotes (e.g., "Hello").
+
+ARRAYS
+- Used to store multiple values in a single variable. (More on arrays in upcoming lessons.)
+
+TYPE CONVERSION
+- Converting the value of one data type to another (e.g., Int to Long).
 */
 
 fun integers() {
-    val myNum: Byte=100
-    println(myNum)
+    val myNum: Byte = 100
+    println("Byte: $myNum")
 
-    // val myNum1: Short=55555555 // error as value bigger than 32767
+    // val myNum1: Short = 55555555 // Error: value too large for Short
     // println(myNum1)
 
-    val myNum2: Int= 123
-    println(myNum2)
+    val myNum2: Int = 123
+    println("Int: $myNum2")
 
-    val myNum3: Long= 93239L // optionally we can end long value by "L" 
-    println(myNum3)
-
+    val myNum3: Long = 93239L // Optionally end Long value with "L"
+    println("Long: $myNum3")
 }
 
-fun floating(){
-    val myNum4: Float = 54.4F // you should end float values with "F".
-    println(myNum4)
+fun floating() {
+    val myNum4: Float = 54.4F // End float values with "F"
+    println("Float: $myNum4")
 
-    val myNum5: Double = 54.4 
-    println(myNum5)
-
+    val myNum5: Double = 54.4
+    println("Double: $myNum5")
 }
 
-fun scientific () {
-    val myNum6: Float = 35E5F
-    val myNum7: Double = 35e4 
-    // "e" or "E" ton indicate the power of 10
-    println(myNum6)
-    println(myNum7)
+fun scientific() {
+    val myNum6: Float = 35E5F // 35 * 10^5 as Float
+    val myNum7: Double = 35e4 // 35 * 10^4 as Double
+    println("Scientific Float: $myNum6")
+    println("Scientific Double: $myNum7")
 }
 
-/* BOOLEAN: takes onllt True and False 
- */
-
-fun bool(){
+fun bool() {
     val isGitfun = true
     val isCodingfun = false
-    println(isGitfun) // o/p = true
-    println(isCodingfun) // o/p = false
+    println("Boolean true: $isGitfun")
+    println("Boolean false: $isCodingfun")
 }
-
-/*
-CHARACTERS: Char is a datatype that stores only single character. it must be sourrounded by single qoutes 
- */
 
 fun characters() {
-    val myGrade: Char = 'B' //cant store more than single character
-    println(myGrade)
+    val myGrade: Char = 'B' // Only a single character
+    println("Char: $myGrade")
 }
 
-/*
-STRINGS: teh String datatype is used to stora a sequence of character data which Char cant. it is sorrounded by double qoutes.
-more on strings in upcomming pushes.
- */
-
-fun str(){
+fun str() {
     val myText: String = "hello, user"
-    println(myText)
+    println("String: $myText")
 }
 
-/*
-ARRAYS: ar eused to store multiplealues in single variable, instead of declaring separate variables fo reach variable
-more on arrays in upcomming pushes
- */
-
-/*
-TYPECONVERSION: process of converting the value of one datatype to another
- */
-
-fun conv(){
+fun conv() {
+    // Type conversion example
     // val x: Int = 10
-    // val y: Long = x
-    // println(y) // Error:: Type mismatch
+    // val y: Long = x // Error: Type mismatch
 
     val m: Int = 10
-    val n: Long = m.toLong()
-    println(n)
+    val n: Long = m.toLong() // Convert Int to Long
+    println("Converted Int to Long: $n")
 }
 
-fun main(){
+fun main() {
+    println("---- Integers ----")
     integers()
+    println("---- Floating-point Numbers ----")
     floating()
+    println("---- Scientific Numbers ----")
     scientific()
+    println("---- Boolean ----")
     bool()
+    println("---- Characters ----")
     characters()
+    println("---- String ----")
     str()
+    println("---- Type Conversion ----")
     conv()
 }
-/*
-o/p
 
-100
-123
-93239
-54.4
-54.4
-3500000.0
-350000.0
-true
-false
-B
-hello, user
-10
+/*
+Sample Output:
+
+---- Integers ----
+Byte: 100
+Int: 123
+Long: 93239
+---- Floating-point Numbers ----
+Float: 54.4
+Double: 54.4
+---- Scientific Numbers ----
+Scientific Float: 3500000.0
+Scientific Double: 350000.0
+---- Boolean ----
+Boolean true: true
+Boolean false: false
+---- Characters ----
+Char: B
+---- String ----
+String: hello, user
+---- Type Conversion ----
+Converted Int to Long: 10
 */

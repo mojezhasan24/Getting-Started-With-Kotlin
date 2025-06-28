@@ -101,11 +101,12 @@ fun main() {
     // and performs the corresponding calculation.
     // If the operator is not recognized, it returns "Invalid operator".
     val result = when (operator) {
-        "+" -> num1 + num2           // Addition
-        "-" -> num1 - num2           // Subtraction
-        "*" -> num1 * num2           // Multiplication
-        "/" -> if (num2 != 0.0) num1 / num2 else "Cannot divide by zero" // Division with zero check
-        "%" -> num1 % num2           // Modulus (remainder)
+        "+" -> (num1 + num2).toString()           // Addition
+        "-" -> (num1 - num2).toString()           // Subtraction
+        "*" -> (num1 * num2).toString()           // Multiplication
+        "/" -> if (num2 != 0.0) (num1 / num2).toString()
+         else "Cannot divide by zero" // Division with zero check
+        "%" -> (num1 % num2).toString()           // Modulus (remainder)
         else -> "Invalid operator"   // Handles invalid input
     }
 

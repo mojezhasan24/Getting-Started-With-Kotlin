@@ -111,6 +111,13 @@ fun main() {
     val byteArray = name.toByteArray() // Converting the string to a byte array
     println("Byte array of name: ${byteArray.joinToString(", ")}") // Using string template to display the byte array
 
+    // string accessing
+    println(name[0]) // Accessing the first character of the string
+    println(name[1]) // Accessing the second character of the string
+    println(name[-1]) // Accessing the last character of the string (negative index not supported in Kotlin, will throw an error)
+    val n = name.lenght // Getting the length of the string
+    println(name[n - 1]) // Accessing the last character of the string using length
+    
 """
     O/P
     My name is John, I am 30 years old, and my height is 5.9 feet.

@@ -101,6 +101,18 @@ This repository is designed to help **absolute beginners** get started with **Ko
 
 ---
 
+## ⚠️ Precautions & Best Practices
+
+- **Always download software from official or trusted sources** to avoid malware.
+- **Set your PATH carefully:** When adding Java or Kotlin to your system PATH, double-check the folder path to avoid breaking other tools.
+- **Use the correct JDK version:** Kotlin works best with JDK 8 or newer. If you have multiple JDKs, make sure the correct one is active.
+- **Be careful with the `!!` operator in Kotlin:** It will throw an exception if the value is null. Use safe calls (`?.`) or null checks for production code.
+- **Keep your tools updated:** Regularly update Java, Kotlin, and your IDE for the latest features and security patches.
+- **On shared or school computers:** You may need admin rights to install software. Ask your system administrator if you encounter permission issues.
+- **Backup your code:** Use version control (like Git) to keep your work safe.
+
+---
+
 ## 🤝 Contribute
 
 Want to help others learn too?  

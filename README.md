@@ -48,6 +48,59 @@ This repository is designed to help **absolute beginners** get started with **Ko
 
 ---
 
+## 🖥️ How to Install Kotlin
+
+### Windows
+
+1. **Install Java JDK:**  
+   Download and install [OpenJDK](https://adoptium.net/) or [Oracle JDK](https://www.oracle.com/java/technologies/downloads/).
+2. **Download Kotlin Compiler:**  
+   - Go to [Kotlin Releases](https://github.com/JetBrains/kotlin/releases) and download the latest compiler zip.
+   - Extract it to a folder (e.g., `C:\kotlin`).
+   - Add the `bin` folder to your system `PATH`.
+3. **Verify Installation:**  
+   Open Command Prompt and run:
+   ```sh
+   kotlinc -version
+   ```
+
+### Linux
+
+1. **Install Java JDK:**  
+   ```sh
+   sudo apt update
+   sudo apt install openjdk-17-jdk
+   ```
+2. **Install Kotlin via SDKMAN (recommended):**  
+   ```sh
+   curl -s "https://get.sdkman.io" | bash
+   source "$HOME/.sdkman/bin/sdkman-init.sh"
+   sdk install kotlin
+   ```
+   Or, download and extract the compiler from [Kotlin Releases](https://github.com/JetBrains/kotlin/releases).
+3. **Verify Installation:**  
+   ```sh
+   kotlinc -version
+   ```
+
+### macOS
+
+1. **Install Java JDK:**  
+   ```sh
+   brew install openjdk@17
+   ```
+2. **Install Kotlin via Homebrew (recommended):**  
+   ```sh
+   brew install kotlin
+   ```
+   Or, use SDKMAN as shown above for Linux.
+3. **Verify Installation:**  
+   ```sh
+   kotlinc -version
+   ```
+
+---
+
 ## 🤝 Contribute
 
 Want to help others learn too?  

@@ -102,3 +102,19 @@ fun checkNumber(number: Int): String {
         else -> "Zero"
     }
 }
+
+/*
+Sample Output:
+
+The value is true
+5 is equal to 5
+At least one condition is false
+At least one condition is true
+The negation is false
+Is 4 even? true
+Is 5 odd? true
+Boolean List: [true, false, true]
+Boolean Map: {isTrue=true, isFalse=false}
+User: Alice, Active: true
+Alice is active
+*/

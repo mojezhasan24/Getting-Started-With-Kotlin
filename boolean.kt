@@ -1,22 +1,23 @@
 /*
 Boolean in Kotlin
 
-A Boolean is a basic data type present in most programming languages. It is fundamental to computer logic and decision making.
+A Boolean is a basic data type used for logic and decision making.
+It can only have two values: true or false.
 
-A Boolean value can only be:
-1. true or false
-2. on or off
-3. yes or no
+Examples of Boolean logic:
+- true or false
+- on or off
+- yes or no
 
-But technically, only true or false are valid values for a Boolean variable or constant.
+But in Kotlin, only true or false are valid Boolean values.
 */
 
 // 1. Boolean values
-val isTrue: Boolean = true      // A boolean variable that is true
-val isFalse: Boolean = false    // A boolean variable that is false
+val isTrue: Boolean = true      // true value
+val isFalse: Boolean = false    // false value
 
-// 2. Boolean expressions
-val isEqual: Boolean = (5 == 5)     // true, because 5 is equal to 5
+// 2. Boolean expressions (using comparison operators)
+val isEqual: Boolean = (5 == 5)     // true, because 5 equals 5
 val isNotEqual: Boolean = (5 != 3)  // true, because 5 is not equal to 3
 
 // 3. Boolean operators
@@ -25,35 +26,35 @@ val orOperation: Boolean = (true || false)  // true, at least one must be true f
 val notOperation: Boolean = !true           // false, NOT inverts the value
 
 fun main() {
-    // 4. Boolean in conditions
+    // 4. Using Boolean in conditions
     if (isTrue) {
-        println("The value is true")
+        println("isTrue: Yes, the value is true")
     } else {
-        println("The value is false")
+        println("isTrue: No, the value is false")
     }
 
     if (isEqual) {
-        println("5 is equal to 5")
+        println("isEqual: 5 is equal to 5")
     } else {
-        println("5 is not equal to 5")
+        println("isEqual: 5 is not equal to 5")
     }
 
     if (andOperation) {
-        println("Both conditions are true")
+        println("andOperation: Both are true")
     } else {
-        println("At least one condition is false")
+        println("andOperation: At least one is false")
     }
 
     if (orOperation) {
-        println("At least one condition is true")
+        println("orOperation: At least one is true")
     } else {
-        println("Both conditions are false")
+        println("orOperation: Both are false")
     }
 
     if (notOperation) {
-        println("The negation is true")
+        println("notOperation: The value is true")
     } else {
-        println("The negation is false")
+        println("notOperation: The value is false")
     }
 
     // 5. Boolean functions
@@ -76,10 +77,10 @@ fun main() {
         println("${user.name} is not active")
     }
 
-    // 8. Boolean in control flow
-    println(checkNumber(10))  // Positive
-    println(checkNumber(-5))  // Negative
-    println(checkNumber(0))   // Zero
+    // 8. Boolean in control flow (using when)
+    println("checkNumber(10): " + checkNumber(10))  // Positive
+    println("checkNumber(-5): " + checkNumber(-5))  // Negative
+    println("checkNumber(0): " + checkNumber(0))    // Zero
 }
 
 // Boolean functions
@@ -106,15 +107,18 @@ fun checkNumber(number: Int): String {
 /*
 Sample Output:
 
-The value is true
-5 is equal to 5
-At least one condition is false
-At least one condition is true
-The negation is false
+isTrue: Yes, the value is true
+isEqual: 5 is equal to 5
+andOperation: At least one is false
+orOperation: At least one is true
+notOperation: The value is false
 Is 4 even? true
 Is 5 odd? true
 Boolean List: [true, false, true]
 Boolean Map: {isTrue=true, isFalse=false}
 User: Alice, Active: true
 Alice is active
+checkNumber(10): Positive
+checkNumber(-5): Negative
+checkNumber(0): Zero
 */

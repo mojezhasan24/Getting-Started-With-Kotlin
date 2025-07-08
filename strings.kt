@@ -47,7 +47,7 @@ fun main() {
     println("Fruits: $fruits")
 
     // String indexing
-    val firstChar = name[0]
+    val firstChar = name[0] // fopr better understanding
     println("First character of name: $firstChar")
 
     // String substring

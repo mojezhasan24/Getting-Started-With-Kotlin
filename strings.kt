@@ -44,7 +44,7 @@ fun main() {
     // String splitting 
     val csv = "apple,banana,cherry"
     val fruits = csv.split(",")
-    println("Fruits: $fruits")
+    println("Fruits: $fruits") // String splitting
 
     // String indexing 
     val firstChar = name[0] 

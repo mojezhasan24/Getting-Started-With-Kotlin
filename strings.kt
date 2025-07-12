@@ -50,7 +50,7 @@ fun main() {
     val firstChar = name[0] 
     println("First character of name: $firstChar")
 
-    // String substring 
+    // String substring
     val substring = name.substring(0, 2)
     println("Substring of name: $substring")
 

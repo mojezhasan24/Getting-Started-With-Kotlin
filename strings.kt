@@ -46,7 +46,7 @@ fun main() {
     val fruits = csv.split(",")
     println("Fruits: $fruits")
 
-    // String indexing
+    // String indexing 
     val firstChar = name[0] 
     println("First character of name: $firstChar")
 

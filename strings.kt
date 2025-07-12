@@ -41,7 +41,7 @@ fun main() {
     val replacedString = originalString.replace("John", "Alice")
     println("Replaced string: $replacedString")
 
-    // String splitting
+    // String splitting 
     val csv = "apple,banana,cherry"
     val fruits = csv.split(",")
     println("Fruits: $fruits")

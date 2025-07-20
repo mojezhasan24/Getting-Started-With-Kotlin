@@ -1,7 +1,7 @@
 # 📚 Kotlin Basics for Beginners
 
 Welcome to the **Kotlin Playground**! 🎉  
-This repository is designed to help **absolute beginners** get started with **Kotlin** — a modern, expressive programming language used for Android apps 🚀 and much more.
+This repository is designed to help **absolute beginners** get started with **Kotlin** — a modern, expressive programming language used for Android apps 🚀 and much more to come.
 
 > ⚠️ This repo is **not** focused on Android development. It's purely for learning **Kotlin syntax and essentials**.
 
